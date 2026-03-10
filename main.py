@@ -9,7 +9,8 @@ from pyrogram.errors import PeerIdInvalid, Forbidden
 # --- КОНФИГ ---
 API_ID = 30032542
 API_HASH = "ce646da1307fb452305d49f9bb8751ca"
-BOT_TOKEN = "8711240311:AAHy5FzxQ7P0MpSm3Bv7xfoYDa9kVlwAb5w"
+import os
+BOT_TOKEN = os.environ.get("BOT_TOKEN", "8711240311:AAHy5FzxQ7P@MpSm3Bv7xfoVDa9kVIwAb5w")
 
 # === НАСТРОЙКА ОДНОРАЗОВЫХ КЛЮЧЕЙ ===
 ONE_TIME_KEYS = {
@@ -655,4 +656,5 @@ if __name__ == "__main__":
     print(f"👥 Пользователей: {len(users_data)}")
 
     bot.run()
+
 
